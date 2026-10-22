@@ -1,0 +1,154 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Instituto Mãos Solidárias</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="topo">
+  <nav class="nav container">
+    <a href="#inicio" class="marca">Instituto <span>Mãos Solidárias</span></a>
+    <ul class="nav-links">
+      <li><a href="#causas">Causas</a></li>
+      <li><a href="#impacto">Impacto</a></li>
+      <li><a href="#doar">Doar</a></li>
+    </ul>
+    <a href="#doar" class="btn btn-primario nav-cta">Quero ajudar</a>
+  </nav>
+</header>
+
+<main>
+  <section id="inicio" class="hero">
+    <div class="container hero-grid">
+      <div class="hero-texto">
+        <span class="eyebrow">Desde 2014 na Zona Leste de São Paulo</span>
+        <h1>Toda doação vira comida, material escolar e oportunidade.</h1>
+        <p>O Instituto Mãos Solidárias conecta quem pode ajudar a famílias em
+          situação de vulnerabilidade, com total transparência sobre onde
+          cada real é usado.</p>
+        <div class="hero-acoes">
+          <a href="#doar" class="btn btn-primario">Fazer uma doação</a>
+          <a href="#causas" class="btn btn-fantasma">Conhecer as causas</a>
+        </div>
+      </div>
+      <div class="hero-stats">
+        <div class="stat-card">
+          <strong data-contador="312">0</strong>
+          <span>famílias atendidas em 2026</span>
+        </div>
+        <div class="stat-card">
+          <strong data-contador="48">0</strong>
+          <span>voluntários ativos</span>
+        </div>
+        <div class="stat-card">
+          <strong data-contador="1850">0</strong>
+          <span>cestas básicas entregues</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="causas" class="causas">
+    <div class="container">
+      <h2>Onde a sua doação atua</h2>
+      <p class="secao-sub">Três frentes constantes, mantidas o ano inteiro.</p>
+      <div class="causas-grade">
+        <article class="causa-card">
+          <div class="causa-icone" aria-hidden="true">🍲</div>
+          <h3>Segurança alimentar</h3>
+          <p>Cestas básicas e refeições quentes para famílias cadastradas,
+            distribuídas toda semana.</p>
+        </article>
+        <article class="causa-card">
+          <div class="causa-icone" aria-hidden="true">📚</div>
+          <h3>Educação</h3>
+          <p>Material escolar, reforço de leitura e aulas de reforço pra
+            crianças de 6 a 14 anos.</p>
+        </article>
+        <article class="causa-card">
+          <div class="causa-icone" aria-hidden="true">🧰</div>
+          <h3>Geração de renda</h3>
+          <p>Oficinas de capacitação profissional pra adultos encontrarem o
+            primeiro emprego ou reforçarem a renda.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section id="impacto" class="impacto">
+    <div class="container impacto-grid">
+      <div class="impacto-texto">
+        <h2>Veja o tamanho do seu impacto</h2>
+        <p class="secao-sub">Arraste o valor e descubra na hora o que ele
+          vira na prática, antes mesmo de doar.</p>
+        <div class="calculadora">
+          <label for="valor-doacao">Valor da doação</label>
+          <div class="calc-linha">
+            <input type="range" id="valor-doacao" min="10" max="500" step="10" value="50">
+            <output id="valor-exibido" for="valor-doacao">R$ 50</output>
+          </div>
+          <p id="resultado-impacto" class="resultado-impacto" aria-live="polite"></p>
+        </div>
+      </div>
+      <div class="impacto-lista">
+        <h3>Exemplos de conversão</h3>
+        <ul>
+          <li><strong>R$ 20</strong> — kit de material escolar básico</li>
+          <li><strong>R$ 50</strong> — uma cesta básica completa</li>
+          <li><strong>R$ 120</strong> — um mês de reforço escolar pra uma criança</li>
+          <li><strong>R$ 300</strong> — uma vaga em oficina profissionalizante</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <section id="doar" class="doar">
+    <div class="container doar-grid">
+      <div class="doar-texto">
+        <h2>Pronto pra fazer parte?</h2>
+        <p class="secao-sub">Preencha o formulário abaixo — entramos em
+          contato em até 2 dias úteis com os próximos passos.</p>
+      </div>
+      <form id="form-doacao" class="form-doacao" novalidate>
+        <div class="campo">
+          <label for="nome">Nome completo</label>
+          <input type="text" id="nome" name="nome" required minlength="3">
+          <span class="erro" data-erro-de="nome"></span>
+        </div>
+        <div class="campo">
+          <label for="email">E-mail</label>
+          <input type="email" id="email" name="email" required>
+          <span class="erro" data-erro-de="email"></span>
+        </div>
+        <div class="campo">
+          <label for="tipo-apoio">Como quer ajudar?</label>
+          <select id="tipo-apoio" name="tipo-apoio" required>
+            <option value="">Selecione...</option>
+            <option value="doacao-unica">Doação única</option>
+            <option value="doacao-mensal">Doação mensal</option>
+            <option value="voluntariado">Voluntariado</option>
+          </select>
+          <span class="erro" data-erro-de="tipo-apoio"></span>
+        </div>
+        <button type="submit" class="btn btn-primario btn-form">Enviar</button>
+        <p id="confirmacao-envio" class="confirmacao" role="status"></p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer class="rodape">
+  <div class="container">
+    <p>Instituto Mãos Solidárias — projeto de exemplo para fins acadêmicos.</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
